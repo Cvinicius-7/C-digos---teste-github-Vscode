@@ -1,3 +1,4 @@
 idade = 19;
-mensagem = "Eu tenho " + idade + " anos";
+nome = "Carlos";
+mensagem = "Sou " + nome + " E  tenho " + idade + " anos"
 console.log(mensagem);
