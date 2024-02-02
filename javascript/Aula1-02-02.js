@@ -1,2 +1,2 @@
 idade = 19;
-console.log(idade);
+console.log("Eu tenho", idade,"anos");
