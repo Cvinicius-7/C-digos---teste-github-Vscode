@@ -22,3 +22,6 @@ if(imcTot>18.6 && imcTot<24.9){
 if(imcTot<18.5){
     cond = 'Abaixo do Normal'
 }
+mensagem = 'olá '+ nome + ' seu imc é ' + imcTot + ' sua condição é ' + cond;
+console.log(mensagem);
+alert(mensagem);
