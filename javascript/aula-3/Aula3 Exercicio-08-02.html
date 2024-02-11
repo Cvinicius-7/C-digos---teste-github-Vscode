@@ -30,7 +30,6 @@
         <label> Gratificações: </label>
         <input type="text" class="form-control" id="gratifica" placeholder="Digite as Gratificações do Funcionário:">
       </div>
-      <input type="button" class="btn btn-primary" value="Enviar" onclick="apresenta()">
       <div class="mb-3 mt-3">
         <label> Descontos: </label>
         <input type="text" class="form-control" id="descontos" placeholder="Digite os Descontos do Funcionário:">
@@ -43,16 +42,18 @@
     </form>
   </div>
   <script>
-    function apresenta(){
+    function apresenta() {
       let nome = document.getElementById("nome").value;
       let anoCont = parseFloat(document.getElementById("anoCont").value);
       const anoAtual = new Date().getFullYear();
       let anoEmpre = anoAtual - anoCont;
       let salBruto = parseFloat(document.getElementById("salBruto").value);
-      let Gratifica = parseFloat(document.getElementById("gratifica").value);
+      let gratifica = parseFloat(document.getElementById("gratifica").value);
+      let descontos = parseFloat(document.getElementById("descontos").value);
 
+      let salLiq = (salBruto + gratifica - descontos) * 1.20 + anoEmpre * 150;
 
-      let mensagem = " Sou " + nome +  " e tenho " + idade + " Anos";
+      let mensagem = "O Funcionário " + nome + " Recebe um Salário Líquido de R$" + salLiq;
 
       document.getElementById("apresentacao").value = mensagem;
     }
