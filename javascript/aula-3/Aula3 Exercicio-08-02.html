@@ -12,15 +12,23 @@
 <body>
 
   <div class="container mt-3">
-    <h2>Cadastro de funcinários</h2>
+    <h2>Cálculo Salário Líquido de Funcionários</h2>
     <form>
       <div class="mb-3 mt-3">
         <label>Nome:</label>
-        <input type="text" class="form-control" id="Nome" placeholder="Digite Seu Nome:">
+        <input type="text" class="form-control" id="Nome" placeholder="Digite o Nome do Funcionário:">
       </div>
       <div class="mb-3">
-        <label> Ano de Nascimento </label>
-        <input type="text" class="form-control" id="anoNascimento" placeholder="Digite Seu Ano de Nascimento:">
+        <label> Ano de Contratação </label>
+        <input type="text" class="form-control" id="anoCont" placeholder="Digite o Ano de Sua Contratação:">
+      </div>
+      <div class="mb-3">
+        <label> Salário Bruto </label>
+        <input type="text" class="form-control" id="salBruto" placeholder="Digite o Salário Bruto do Funcionário:">
+      </div>
+      <div class="mb-3">
+        <label> Salário Bruto </label>
+        <input type="text" class="form-control" id="salBruto" placeholder="Digite o Salário Bruto do Funcionário:">
       </div>
       <input type="button" class="btn btn-primary" value="Enviar" onclick="apresenta()">
       <div class="mb-3 mt-3">
@@ -32,9 +40,12 @@
   <script>
     function apresenta(){
       let nome = document.getElementById("Nome").value;
-      let anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+      let anoCont = parseInt(document.getElementById("anoCont").value);
       const anoAtual = new Date().getFullYear();
-      let idade = anoAtual - anoNascimento;
+      let anoEmpre = anoAtual - anoCont;
+      let salBruto = document.getElementById("salBruto").value;
+
+
       let mensagem = " Sou " + nome +  " e tenho " + idade + " Anos";
 
       document.getElementById("apresentacao").value = mensagem;
