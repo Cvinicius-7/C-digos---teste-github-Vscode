@@ -25,13 +25,18 @@
       <input type="button" class="btn btn-primary" value="Enviar" onclick="apresenta()">
       <div class="mb-3 mt-3">
         <label>Saída:</label>
-        <input type="text" class="form-control" id="Nome" readonly>
+        <input type="text" class="form-control" id="apresentacao" readonly>
       </div>
     </form>
   </div>
   <script>
     function apresenta(){
-      alert("test");
+      let nome = document.getElementById("Nome").value;
+      let anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+      let idade = new Date().getFullYear() - anoNascimento;
+      let mensagem = "Sou " + nome +  "e tenho " + idade + " Anos";
+
+      document.getElementById("apresentacao").value = mensagem;
     }
 
   </script>
