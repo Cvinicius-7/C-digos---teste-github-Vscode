@@ -16,19 +16,24 @@
     <form>
       <div class="mb-3 mt-3">
         <label>Nome:</label>
-        <input type="text" class="form-control" id="Nome" placeholder="Digite o Nome do Funcionário:">
+        <input type="text" class="form-control" id="nome" placeholder="Digite o Nome do Funcionário:">
       </div>
       <div class="mb-3">
-        <label> Ano de Contratação </label>
+        <label> Ano de Contratação: </label>
         <input type="text" class="form-control" id="anoCont" placeholder="Digite o Ano de Sua Contratação:">
       </div>
       <div class="mb-3">
-        <label> Salário Bruto </label>
+        <label> Salário Bruto: </label>
         <input type="text" class="form-control" id="salBruto" placeholder="Digite o Salário Bruto do Funcionário:">
       </div>
       <div class="mb-3">
-        <label> Salário Bruto </label>
-        <input type="text" class="form-control" id="salBruto" placeholder="Digite o Salário Bruto do Funcionário:">
+        <label> Gratificações: </label>
+        <input type="text" class="form-control" id="gratifica" placeholder="Digite as Gratificações do Funcionário:">
+      </div>
+      <input type="button" class="btn btn-primary" value="Enviar" onclick="apresenta()">
+      <div class="mb-3 mt-3">
+        <label> Descontos: </label>
+        <input type="text" class="form-control" id="descontos" placeholder="Digite os Descontos do Funcionário:">
       </div>
       <input type="button" class="btn btn-primary" value="Enviar" onclick="apresenta()">
       <div class="mb-3 mt-3">
@@ -39,11 +44,12 @@
   </div>
   <script>
     function apresenta(){
-      let nome = document.getElementById("Nome").value;
-      let anoCont = parseInt(document.getElementById("anoCont").value);
+      let nome = document.getElementById("nome").value;
+      let anoCont = parseFloat(document.getElementById("anoCont").value);
       const anoAtual = new Date().getFullYear();
       let anoEmpre = anoAtual - anoCont;
-      let salBruto = document.getElementById("salBruto").value;
+      let salBruto = parseFloat(document.getElementById("salBruto").value);
+      let Gratifica = parseFloat(document.getElementById("gratifica").value);
 
 
       let mensagem = " Sou " + nome +  " e tenho " + idade + " Anos";
