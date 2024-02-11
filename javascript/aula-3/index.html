@@ -33,8 +33,9 @@
     function apresenta(){
       let nome = document.getElementById("Nome").value;
       let anoNascimento = parseInt(document.getElementById("anoNascimento").value);
-      let idade = new Date().getFullYear() - anoNascimento;
-      let mensagem = "Sou " + nome +  "e tenho " + idade + " Anos";
+      const anoAtual = new Date().getFullYear();
+      let idade = anoAtual - anoNascimento;
+      let mensagem = " Sou " + nome +  " e tenho " + idade + " Anos";
 
       document.getElementById("apresentacao").value = mensagem;
     }
