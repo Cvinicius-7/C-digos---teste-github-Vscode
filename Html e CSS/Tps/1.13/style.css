@@ -1,0 +1,7 @@
+#card {
+    border-color: red;
+    border-style: dashed;
+    border-width: 2px;
+
+    text-align: center;
+}
