@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  #card{
+    width: 300px;
+    border: 1px solid;
+    font-family: Verdana;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: purple;
+  }
