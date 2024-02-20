@@ -24,11 +24,22 @@
                 <label>Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Digite Seu E-mail:">
             </div>
-            <div>
+            <div class="mb-3 mt-3">
+                <label>Signo</label>
+                <select class="form-select" id="signo" >
+                    <option value="20">leao</option>
+                    <option value="40">virgem</option>
+
+                </select>
+            </div>
+
+            <div class="mb-3 mt-3">
                 <button type="button" class="btn btn-primary" onclick="definir()">Enviar</button>
+
                 <label>Resultado:</label>
                 <input type="text" class="form-control" id="resultado" readonly>
             </div>
+
         </form>
     </div>
     <script src="scriptAula6.js"></script>
