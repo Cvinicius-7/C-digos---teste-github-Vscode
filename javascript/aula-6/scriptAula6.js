@@ -10,5 +10,5 @@ function definir(){
 
     let resultado = valorSigno + valorTime + valorSoftskill;
 
-    document.getElementById("resultado")
+    document.getElementById("resultado").value = resultado;
 }
