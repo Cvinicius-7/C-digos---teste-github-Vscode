@@ -1,0 +1,2 @@
+let salario = 999;
+
