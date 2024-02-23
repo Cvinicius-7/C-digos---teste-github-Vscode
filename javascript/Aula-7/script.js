@@ -1,5 +1,5 @@
 let salario = 1000; //rico(>=1000), pobre(<500) e classe média(>=500 e <1000)
-let idade = 45;
+let idade = 45; //jovem(<60) e idoso(>=60)
 let status = "meu status"; 
 let situacao = "minha situacao";
 
@@ -12,11 +12,7 @@ if (salario >= 1000) {
 }
 
 
-if (idade >= 60) {
-    situacao = "Idoso";
-}else {
-    situacao = 'jovem';
-}
+situacao = idade >= 60 ? "idoso" : "jovem";
 
 alert(status + " " + situacao);
 
