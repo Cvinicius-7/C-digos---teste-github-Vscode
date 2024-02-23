@@ -1,15 +1,28 @@
 let salario = 1000; //rico(>=1000), pobre(<500) e classe média(>=500 e <1000)
+let idade = 45;
+let status = "meu status"; 
+let situacao = "minha situacao";
 
 if (salario >= 1000) {
-  alert("Rico");
+    status ="Rico";
 } else if (salario <= 500) {
-  alert("Pobre");
+    status = "Pobre";
 }else {
-  alert("Classe média");
+    status = "Classe média";
 }
- //casos de teste:
- //salario = 1000, esperado: Rico
- //salario = 500, esperado: Classe média
- //salario = 0, esperado: Pobre
- //salario = 499, esperado: Pobre
- //salario = 999, esperado: Classe média
+
+
+if (idade >= 60) {
+    situacao = "Idoso";
+}else {
+    situacao = 'jovem';
+}
+
+alert(status + " " + situacao);
+
+//casos de teste:
+//salario = 1000 , esperado: Rico
+//salario = 500, esperado: Classe média
+//salario = 0, esperado: Pobre
+//idade = 60,salario = 500 esperado: Idoso Classe média
+//idade = 59, salario = 1000, esperado: Rico jovem
