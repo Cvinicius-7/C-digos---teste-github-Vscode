@@ -9,5 +9,5 @@ let percent = parseFloat(prompt("Informe o percentual do aumento:"));
 let reajuste = salario * (percent/100);
 let salFinal = salario + reajuste;
 
-alert("O valor do salário reajustado é " + salFinal + " Reais");
-console.log("O valor do salário reajustado é " + salFinal + " Reais");
+alert("O valor do salário reajustado é " + salFinal.toFixed(2) + " Reais");
+console.log("O valor do salário reajustado é " + salFinal.toFixed(2) + " Reais");

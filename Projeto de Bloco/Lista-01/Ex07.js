@@ -6,6 +6,6 @@ let valConta = parseFloat(prompt("digite o valor da conta"));
 let gorjeta= valConta* 10/100;
 let contaFinal = valConta +gorjeta;
 
-alert("o valor da gorjeta será de: " + gorjeta +" Reais o valor final da conta será de: " + contaFinal + " Reais");
-console.log("o valor da gorjeta será de: " + gorjeta +" Reais o valor final da conta será de: " + contaFinal + " Reais");
+alert("o valor da gorjeta será de: " + gorjeta.toFixed(2) +" Reais o valor final da conta será de: " + contaFinal.toFixed(2) + " Reais");
+console.log("o valor da gorjeta será de: " + gorjeta.toFixed(2) +" Reais o valor final da conta será de: " + contaFinal.toFixed(2) + " Reais");
 
