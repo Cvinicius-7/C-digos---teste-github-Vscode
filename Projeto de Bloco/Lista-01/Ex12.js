@@ -4,4 +4,5 @@
 
 let areaE = (raio ** 2) * (4 * 3.14);
 
-alert("A área da esfera é: " + areaE + " Centímetros Quadrados");
+alert("A área da esfera é: " + areaE.toFixed(2) + " Centímetros Quadrados");
+console.log("A área da esfera é: " + areaE.toFixed(2) + " Centímetros Quadrados");

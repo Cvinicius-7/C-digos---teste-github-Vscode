@@ -7,3 +7,4 @@
  let area = altura * base;
 
  alert("A área do triângulo é: " + area.toFixed(1) + " Centimetros Quadrados");
+ console.log("A área do triângulo é: " + area.toFixed(1) + " Centimetros Quadrados");

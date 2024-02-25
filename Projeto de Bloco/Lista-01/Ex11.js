@@ -5,4 +5,5 @@ let raio = parseFloat(prompt("Digite o valor do raio do círculo em CM :"));
 
 let area = (raio ** 2) * 3.14;
 
-alert("A área do círculo é: " + area + " Centímetros Quadrados");
+alert("A área do círculo é: " + area.toFixed(2) + " Centímetros Quadrados");
+console.log("A área do círculo é: " + area.toFixed(2) + " Centímetros Quadrados");
