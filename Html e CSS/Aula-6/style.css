@@ -23,7 +23,7 @@ main{
 
 }
 header{
-    background-color: burlywood;
+    background-color: rgb(240, 224, 203);
     border: 2px solid; 
     cursor: pointer;
     border-radius: 3px;
@@ -31,11 +31,12 @@ header{
     padding: 0 10px;
 }
 footer{
-    background-color: burlywood;
+    background-color: rgb(240, 224, 203);
     border: 2px solid; 
     cursor: pointer;
     border-radius: 3px;
     font-size: 70%;
+    text-align: center;
 }
 aside{
     width: 180px;
@@ -53,16 +54,19 @@ a:hover{
     text-decoration: none;
 }
 .menuItem{
-    background-color: burlywood;
+    background-color: rgb(240, 224, 203);
     border: 2px solid black; 
     cursor: pointer;
     border-radius: 2px;
     list-style-type: none;
-    
+    text-align: center;
 }
 .menuItem:hover{
     background-color: rgb(240, 220, 195);
     border: 2px solid black; 
     cursor: pointer;
     border-radius: 2px;
+}
+.menuList{
+    padding: 0;
 }
