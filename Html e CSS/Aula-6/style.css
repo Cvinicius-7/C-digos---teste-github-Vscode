@@ -1,10 +1,13 @@
+body{
+    font-family: 100% 'Lucida Sans', Verdana;
+    margin: 20px;
+}
+
+
 nav{
     width: 200px;
     float: left;
     border: 1px solid;
-
-
-
 }
 main{
     margin: 0 210px;
@@ -17,6 +20,20 @@ main{
     margin: 0;
     border: 1px solid;
 
+}
+header{
+    background-color: burlywood;
+    border: 2px solid green; 
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 10px;
+}
+footer{
+    background-color: burlywood;
+    border: 2px solid green; 
+    cursor: pointer;
+    border-radius: 3px;
 }
 aside{
     width: 180px;
