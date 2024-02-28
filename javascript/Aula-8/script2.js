@@ -17,5 +17,3 @@ alert("Triângulo Isósceles");
     alert("Triângulo Escaleno")
 }
 
-//condição
-alert("Triângulo Escaleno");
