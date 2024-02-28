@@ -1,5 +1,5 @@
 //entrada
-let idade = 45;
+let idade = number(prompt("Digite a idade do funcionário: "));
 let msg = "O funcionário é menor de idade(" + idade + ")";
 
 //processamento
