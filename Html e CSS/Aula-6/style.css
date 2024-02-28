@@ -1,10 +1,73 @@
+body{
+    font-family: 100% 'Lucida Sans', Verdana;
+    margin: 20px;
+}
+
+
 nav{
     width: 200px;
     float: left;
-
-
-
+    border: 1px solid;
+    
+}
+main{
+    margin: 0 210px;
 }
 #container{
     position: relative;
+    overflow: auto;
+    padding: 0
+}
+#iframe_principal{
+    margin: 0;
+    border: 1px solid;
+
+}
+header{
+    background-color: rgb(240, 224, 203);
+    border: 2px solid; 
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 10px;
+}
+footer{
+    background-color: rgb(240, 224, 203);
+    border: 2px solid; 
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 70%;
+    text-align: center;
+}
+aside{
+    width: 180px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    border: 2px solid;
+}
+a{
+    color: green;
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: none;
+}
+.menuItem{
+    background-color: rgb(240, 224, 203);
+    border: 2px solid black; 
+    cursor: pointer;
+    border-radius: 2px;
+    list-style-type: none;
+    text-align: center;
+}
+.menuItem:hover{
+    background-color: rgb(240, 220, 195);
+    border: 2px solid black; 
+    cursor: pointer;
+    border-radius: 2px;
+}
+.menuList{
+    padding: 0;
 }
