@@ -16,6 +16,7 @@ main{
 #container{
     position: relative;
     overflow: auto;
+    padding: 0
 }
 #iframe_principal{
     margin: 0;
