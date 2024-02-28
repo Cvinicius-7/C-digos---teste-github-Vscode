@@ -8,6 +8,7 @@ nav{
     width: 200px;
     float: left;
     border: 1px solid;
+    
 }
 main{
     margin: 0 210px;
@@ -23,7 +24,7 @@ main{
 }
 header{
     background-color: burlywood;
-    border: 2px solid green; 
+    border: 2px solid; 
     cursor: pointer;
     border-radius: 3px;
     text-align: center;
@@ -31,9 +32,10 @@ header{
 }
 footer{
     background-color: burlywood;
-    border: 2px solid green; 
+    border: 2px solid; 
     cursor: pointer;
     border-radius: 3px;
+    font-size: 70%;
 }
 aside{
     width: 180px;
@@ -41,7 +43,7 @@ aside{
     top: 0;
     right: 0;
     position: absolute;
-    border: 1px solid;
+    border: 2px solid;
 }
 a{
     color: green;
@@ -52,14 +54,15 @@ a:hover{
 }
 .menuItem{
     background-color: burlywood;
-    border: 2px solid green; 
+    border: 2px solid black; 
     cursor: pointer;
     border-radius: 2px;
+    list-style-type: none;
     
 }
 .menuItem:hover{
     background-color: rgb(240, 220, 195);
-    border: 2px solid green; 
+    border: 2px solid black; 
     cursor: pointer;
     border-radius: 2px;
 }
