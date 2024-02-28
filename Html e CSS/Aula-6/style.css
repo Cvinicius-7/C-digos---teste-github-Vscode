@@ -5,6 +5,38 @@ nav{
 
 
 }
+main{
+    margin: 0 210px;
+}
 #container{
     position: relative;
+    overflow: auto;
+}
+#iframe_principal{
+    margin: 0;
+
+}
+aside{
+    width: 180px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+a{
+    color: green;
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: none;
+}
+.menuItem{
+    background-color: burlywood;
+    border: 2px solid green; 
+    cursor: pointer;
+}
+.menuItem:hover{
+    background-color: rgb(240, 220, 195);
+    border: 2px solid green; 
+    cursor: pointer;
 }
