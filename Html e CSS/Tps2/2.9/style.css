@@ -1,0 +1,9 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  .card{
+    border: solid 2px;
+    border-color: rgb(25, 150, 190);
+  }
+  
