@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  .item1{
+    font-weight: bold;
+  }
+  .item2{
+    visibility: hidden;
+  }
+  .item3{  
+    font-style: italic;
+  }
