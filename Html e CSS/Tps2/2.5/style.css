@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  a{
+    font-weight: bold;
+    color: green
+  }
+  .contato{
+    background-color: blue;
+  }
