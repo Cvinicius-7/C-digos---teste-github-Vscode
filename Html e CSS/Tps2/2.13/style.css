@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  .container{
+    align-items: center;
+    display: flex;
+  font-size: 18px;
+  }
+  
+  .container img{
+    width: 150px;
+    height: 150px;
+  }
