@@ -20,4 +20,4 @@ for (let i; i < notas.length; i++) {
 
 media = soma / notas.length;
 
-alert(nomeAluno + "-" + nomeDisciplina + "-" + qtdProvas);
+alert(nomeAluno + "-" + nomeDisciplina + "-" + media.toFixed(2));
