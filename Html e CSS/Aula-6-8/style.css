@@ -53,6 +53,7 @@ a{
 }
 a:hover{
     text-decoration: none;
+    cursor: pointer;
 }
 .menuItem{
     background-color: rgb(240, 224, 203);
