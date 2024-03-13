@@ -1,0 +1,23 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+caption {
+  background-color: rgba(226, 224, 224, 0.623);
+}
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  align-items: center;
+  background-color: rgba(226, 224, 224, 0.623);
+  margin: 50px auto;
+}
+th,td  {
+  border: 1px solid black;
+    border-collapse: collapse;
+    width: 110px;
+    text-align: center;
+  background-color: rgba(226, 224, 224, 0.623);
+}
+td{
+    text-align: left;
+}
