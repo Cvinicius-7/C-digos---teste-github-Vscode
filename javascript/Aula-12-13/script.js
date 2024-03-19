@@ -11,7 +11,7 @@ for (let i = 0; i < qtdProvas; i++) {
 let media = 0;
 let soma = 0;
 
-for (let i; i < notas.length; i++) {
+for (let i = 0; i < notas.length; i++) {
   soma = soma + notas[i];
 }
 
