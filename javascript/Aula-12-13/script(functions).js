@@ -1,14 +1,15 @@
 
 function obterSituacao(aMedia) {
   const notaAprovacao = 7;
-  let situacao = "Reprovado";
-
   if (aMedia >= notaAprovacao) {
-    situacao = "Aprovado";
+    return "Aprovado";
   }
 
-  return situacao;
+  return "reprovado";
 }
-let outraMedia = 8;
-let minhaSituacao = obterSituacao(outraMedia);
-alert("a minha situacao e" + minhaSituacao);
+let situacao = obterSituacao(media);
+
+alert(
+    nomeAluno + "-" + nomeDisciplina + "-" + media.toFixed(2) + "-" + situacao
+  );
+   
