@@ -1,5 +1,15 @@
 
 
+function receberNotas(aQDProvas){
+    let notas = [];
+
+for (let i = 0; i < aQDProvas; i++) {
+  let nota = parseFloat(prompt("Digite a nota da prova"));
+
+  notas.push(nota);
+}
+}
+
 function calcularMedia(asNotas) {
   let media = 0;
   let soma = 0;
@@ -21,7 +31,7 @@ function obterSituacao(aMedia) {
 
   return "reprovado";
 }
-
+let notas = receberNotas(qteProva);
 let media = calcularMedia(notas);
 let situacao = obterSituacao(media);
 
