@@ -20,6 +20,12 @@
   z-index: 1;
   width: 100%;
 }
+.github{
+    position: absolute;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+}
 a {
   text-decoration: none;
 }
