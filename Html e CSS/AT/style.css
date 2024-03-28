@@ -48,8 +48,8 @@ ul {
 }
 .sobreMim{
     position: absolute;
-    top: 62%;
-    left: 59%;
+    top: 370px;
+    left: 785px;
     padding: 20px;
     border-radius: 20px;
     background-color: #142d4c;
@@ -61,7 +61,7 @@ img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  margin: auto, 0;
+    margin-right: 80px;
 }
 
 footer {
@@ -71,4 +71,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.sobre{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    padding: 80px;
+    gap: 40px;
+    
+
+    background-color: #e8e8e8c5;
+}
+span h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    padding-bottom: 15px;
+    background-color: #e8e8e8c5;
 }
