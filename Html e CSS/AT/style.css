@@ -118,6 +118,7 @@ footer {
   gap: 50px;
   padding: 80px;
   background-color: #e8e8e8c5;
+  font-weight: 300;
 }
 .projetos img {
   width: 500px;
@@ -131,4 +132,18 @@ footer {
   filter: grayscale(0%);
   transition: 0.5s;
   cursor: pointer;
+}
+.historico {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 35px; 
+  background-color: #e8e8e8c5;
+}
+
+.historico li,
+.historico p {
+  font-weight: 300;
 }
