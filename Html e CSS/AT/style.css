@@ -20,11 +20,11 @@
   z-index: 1;
   width: 100%;
 }
-.github{
-    position: absolute;
-    right: 40px;
-    width: 25px;
-    height: 25px;
+.github {
+  position: absolute;
+  right: 40px;
+  width: 25px;
+  height: 25px;
 }
 a {
   text-decoration: none;
@@ -58,15 +58,15 @@ ul {
   font-weight: 400;
 }
 .sobreMim {
-  position: absolute;
-  top: 370px;
-  left: 785px;
-  padding: 20px;
+  display: flex;
+  margin-top: 20px;
+  padding: 12px;
+  justify-content: center;
   border-radius: 20px;
   background-color: #142d4c;
   color: white;
 }
-.home img{
+.home img {
   display: flex;
   width: 300px;
   height: 300px;
@@ -97,16 +97,15 @@ footer {
   font-size: 50px;
   padding-bottom: 15px;
 }
-.conhece{
+.conhece {
   display: flex;
   row-gap: 50px;
   flex-direction: column;
   text-align: center;
   align-items: center;
-
 }
 
-.conhece img{
+.conhece img {
   width: 100px;
   height: 100px;
 }
@@ -120,15 +119,16 @@ footer {
   padding: 80px;
   background-color: #e8e8e8c5;
 }
-.projetos img{
+.projetos img {
   width: 500px;
   height: 350px;
   border-radius: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-.projetos img:hover{
   filter: grayscale(100%);
- transition: 0.5s;
+}
+.projetos img:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
   cursor: pointer;
-}	
+}
