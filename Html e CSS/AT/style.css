@@ -98,10 +98,15 @@ footer {
   padding-bottom: 15px;
 }
 .conhece{
-  text-align: center;
-
-}
-.conhece ul{
+  display: flex;
+  row-gap: 50px;
+  flex-direction: column;
   text-align: center;
   align-items: center;
+
+}
+
+.conhece img{
+  width: 100px;
+  height: 100px;
 }
