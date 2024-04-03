@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: Ubuntu;
   color: #142d4c;
+  scroll-behavior: smooth;
 }
 .menu {
   background-color: #e8e8e8c5;
@@ -72,6 +73,13 @@ ul {
   height: 300px;
   border-radius: 50%;
   margin-right: 80px;
+}
+.sobreMim:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 0.75rem #1a3b63);
+  transition: 0.5s;
+
 }
 
 footer {
