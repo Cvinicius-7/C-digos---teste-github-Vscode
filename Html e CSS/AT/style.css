@@ -132,10 +132,10 @@ footer img {
   align-items: center;
   border-left: solid #1a3b63;
 }
-
 .conhece img {
   width: 100px;
   height: 100px;
+  margin: 10px;
 }
 .grid {
   display: grid;
@@ -180,13 +180,40 @@ footer img {
   padding: 35px;
   font-weight: 300;
 }
+button {
+  color: #e8e8e8;
+  background-color: #142d4c;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem #1660a5);
+  transition: 0.5s;
+  transform: scale(1.02);
+}
 span {
   font-weight: 700;
   text-align: center;
   padding-top: 150px;
 }
-.texto {
+.textoFoot {
   border-right: solid 1px #1a3b63;
   padding-right: 15px;
   font-size: 15px;
+}
+.textoFoot p:hover {
+  color: #1660a5;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem #1660a5);
+  transition: 0.5s;
+  transform: scale(1.02);
+}
+footer a:hover {
+  filter: drop-shadow(0 0 0.75rem #1660a5);
+  transition: 0.5s;
+  transform: scale(1.02);
 }
