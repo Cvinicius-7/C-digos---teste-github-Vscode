@@ -183,7 +183,7 @@ footer img {
 button {
   color: #e8e8e8;
   background-color: #142d4c;
-  border: none;
+  border: solid 1px #142d4c;
   padding: 15px;
   border-radius: 20px;
   margin-top: 15px;
