@@ -21,7 +21,7 @@
   z-index: 1;
   width: 100%;
 }
-.logo img{ 
+.logo img {
   position: absolute;
   justify-content: center;
   left: 40px;
@@ -39,19 +39,19 @@ ul {
   flex-direction: row;
   font-weight: 500;
 }
-.li:hover{
+.li:hover {
   color: #1660a5;
 }
 
 .home {
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 150px;
   display: flex;
   justify-content: center;
   gap: 20px;
   background-color: #e8e8e8c5;
 }
-.home img:hover{
+.home img:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 0 0.75rem #1a3b6385);
   transition: 0.5s;
@@ -107,7 +107,6 @@ footer {
 footer img {
   width: 25px;
   height: 25px;
- 
 }
 
 .sobre {
@@ -124,7 +123,6 @@ footer img {
   font-weight: 900;
   font-size: 50px;
   padding-bottom: 15px;
-  
 }
 .conhece {
   display: flex;
@@ -138,23 +136,27 @@ footer img {
 .conhece img {
   width: 100px;
   height: 100px;
-  
 }
-.projetos {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+.grid {
+  display: grid;
   gap: 50px;
-  padding: 80px;
+  padding: 50px;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(2, 0.5fr);
   background-color: #e8e8e8c5;
-  font-weight: 300;
 }
+
+.projetos {
+  text-align: center;
+  background-color: #e8e8e8c5;
+}
+
 .projetos img {
-  width: 500px;
-  height: 350px;
-  border-radius: 20px;
+  width: 100%;
+  height: 25%;
+  overflow: hidden;
+  border-radius: 25px;
   padding-top: 15px;
   padding-bottom: 15px;
   filter: grayscale(100%);
@@ -168,18 +170,23 @@ footer img {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
+  place-items: center;
+  gap: 20px;
   background-color: #e8e8e8c5;
   padding-bottom: 100px;
+  padding-top: 50px;
 }
-
-.historico li,
-.historico p {
+.historico li {
+  padding: 35px;
   font-weight: 300;
-
 }
-.historico h2{
-  border-bottom: solid #142d4c;
+span {
+  font-weight: 700;
+  text-align: center;
+  padding-top: 150px;
+}
+.texto {
+  border-right: solid 1px #1a3b63;
+  padding-right: 15px;
+  font-size: 15px;
 }
