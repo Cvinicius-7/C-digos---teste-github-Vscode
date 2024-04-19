@@ -7,3 +7,10 @@
 //exibir nome e posiçaõ do jogador
 
 //um vetor para os nomes e outro para as posições
+
+
+
+const qdeJogador = 3
+
+let nomes = []
+let posicoes = []
