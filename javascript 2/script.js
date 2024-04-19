@@ -12,18 +12,22 @@ function escolhaPosicao(){
     let dominio = ["goleiro", "zagueiro", "meia", "atacante"];
     let posicao = parseInt(prompt("Digite a posição do jogador: \n 1-Goleiro \n 2-Zagueiro \n 3-Meia \n 4-Atacante"));
   
-    return dominio[posicao-1]
+    return dominio[posicao-1];
   }
 
-const qdeJogador = 3
+const qdeJogador = 3;
 
-let nomes = []
-let posicoes = []
+let nomes = [];
+let posicoes = [];
 
 for(let i = 0; i<qdeJogador; i++){
     let nome = prompt("Digite o nome do jogador "  + (i+1) + ":");
-    nomes.push(nome)
+    nomes.push(nome);
     
    
-    posicoes.push(escolhaPosicao())
+    posicoes.push(escolhaPosicao());
+  }
+
+  for(let i=0; i<qdeJogador; i++){
+    alert("Nome: " + nomes[i] + " - posição: " + posicoes[i]);
   }
