@@ -19,3 +19,11 @@ const qdeJogador = 3
 
 let nomes = []
 let posicoes = []
+
+for(let i = 0; i<qdeJogador; i++){
+    let nome = prompt("Digite o nome do jogador "  + (i+1) + ":");
+    nomes.push(nome)
+    
+   
+    posicoes.push(escolhaPosicao())
+  }
