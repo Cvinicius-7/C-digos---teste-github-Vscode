@@ -8,45 +8,45 @@
 
 //um vetor para os nomes e outro para as posições
 
-function escolhaPosicao(){
-    let dominio = ["goleiro", "zagueiro", "meia", "atacante"];
+function escolhaPosicao() {
+  let dominio = ["goleiro", "zagueiro", "meia", "atacante"];
 
-    let posicao;
+  let posicao;
 
-  do{
+  do {
     posicao = parseInt(prompt("Digite a posição do jogador: \n 1-Goleiro \n 2-Zagueiro \n 3-Meia \n 4-Atacante"));
-  }while(posicao < 1 || posicao > dominio.length);
+  } while (posicao < 1 || posicao > dominio.length);
 
-  return dominio[posicao-1];
-  }
+  return dominio[posicao - 1];
+}
 
-function impressao(osJogadores){
-  for(let i=0; i<osJogadores.length; i++){
-    alert("Nome: " + osJogadores[i].nome + " - posição: " + osJogadores[i].posicao);
-  }
+function impressao(osJogadores) {
 
+  osJogadores.forEach((func, index) => {
+
+    alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao);
+  });
 }
 
 const qdeJogador = 3;
-
 let jogadores = [];
 
-for(let i = 0; i<qdeJogador; i++){
+for (let i = 0; i < qdeJogador; i++) {
 
-    let nome = prompt("Digite o nome do jogador "  + (i+1) + ":");
-    let posicao = escolhaPosicao();
-    let camisa = parseInt(prompt("Digite a camisa do jogador "  + nome + ":"));
-    let anoNascimento = parseInt(prompt("Digite o ano de nascimento do jogador "  + nome + ":"));
-    let salario = parseFloat(prompt("Digite o salário do jogador "  + nome + ":"));
+  let nome = prompt("Digite o nome do jogador " + (i + 1) + ":");
+  let posicao = escolhaPosicao();
+  let camisa = parseInt(prompt("Digite a camisa do jogador " + nome + ":"));
+  let anoNascimento = parseInt(prompt("Digite o ano de nascimento do jogador " + nome + ":"));
+  let salario = parseFloat(prompt("Digite o salário do jogador " + nome + ":"));
 
-    jogadores.push(
-      {
-        nome: nome,
-        posicao: posicao,
-        camisa: camisa,
-        anoNascimento: anoNascimento,
-        salario: salario
-      }
-    );
-  }
+  jogadores.push(
+    {
+      nome: nome,
+      posicao: posicao,
+      camisa: camisa,
+      anoNascimento: anoNascimento,
+      salario: salario
+    }
+  );
+}
 impressao(jogadores);
