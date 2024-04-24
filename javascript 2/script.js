@@ -24,13 +24,25 @@ const qdeJogador = 3;
 
 let nomes = [];
 let posicoes = [];
+let jogadores = [];
 
 for(let i = 0; i<qdeJogador; i++){
+  
     let nome = prompt("Digite o nome do jogador "  + (i+1) + ":");
-    nomes.push(nome);
-    
-   
-    posicoes.push(escolhaPosicao());
+    let posicao = escolhaPosicao();
+    let camisa = parseInt(prompt("Digite a camisa do jogador "  + nome + ":"));
+    let anoNascimento = parseInt(prompt("Digite o ano de nascimento do jogador "  + nome + ":"));
+    let salario = parseFloat(prompt("Digite o salário do jogador "  + nome + ":"));
+
+    jogadores.push(
+      {
+        nome: nome,
+        posicao: posicao,
+        camisa: camisa,
+        anoNascimento: anoNascimento,
+        salario: salario
+      }
+    );
   }
 
   for(let i=0; i<qdeJogador; i++){
