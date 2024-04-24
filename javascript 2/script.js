@@ -1,11 +1,7 @@
 //cadastramento de jogadores
-
 //informar quantos jogadores serão cadastrados
-
 //goleiro,lateral,meia,atacante : previamente preenchido num vetor
-
 //exibir nome e posiçaõ do jogador
-
 //um vetor para os nomes e outro para as posições
 
 function escolhaPosicao() {
@@ -21,11 +17,27 @@ function escolhaPosicao() {
 }
 
 function impressao(osJogadores) {
-
   osJogadores.forEach((func, index) => {
 
-    alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao);
+    let salarioLiquido = calculoSalarial(func.salario);  
+
+    alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao + " - salário: " + func.salario + " - salário Líquido: " + salarioLiquido);
   });
+}
+function calcularBonusPorIdade(){
+
+  return 1;
+}
+function calcularBonusPorPosicao(){
+
+  return 1;
+}
+function calculoSalarial(oSalario){
+
+  let valorBonusPorPosicao = calcularBonusPorPosicao();
+  let valorBonusPorIdade = calcularBonusPorIdade();
+
+  return oSalario +valorBonusPorIdade + valorBonusPorPosicao
 }
 
 const qdeJogador = 3;
