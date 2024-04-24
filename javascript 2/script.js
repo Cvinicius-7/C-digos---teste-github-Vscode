@@ -37,11 +37,10 @@ function calcularBonusPorIdade(aIdade){
 }
 function calcularBonusPorPosicao(){
 
-  return 1;
 }
 function calcularIdade(oAno){
 
-  const anoAtual = newDate().getFullYear();
+  const anoAtual = new Date().getFullYear();
 
   return anoAtual - oAno;
 }
