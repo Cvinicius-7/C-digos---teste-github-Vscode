@@ -19,12 +19,18 @@ function escolhaPosicao() {
 function impressao(osJogadores) {
   osJogadores.forEach((func, index) => {
 
-    let salarioLiquido = calculoSalarial(func.salario);  
+    let salarioLiquido = calculoSalarial(func.salario, func.anoNascimento);  
 
     alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao + " - salário: " + func.salario + " - salário Líquido: " + salarioLiquido);
   });
 }
-function calcularBonusPorIdade(){
+function calcularBonusPorIdade(aIdade){
+
+    if(aIdade <=20){
+
+    }else if(aIdade >40){
+
+    }else
 
   return 1;
 }
@@ -32,10 +38,19 @@ function calcularBonusPorPosicao(){
 
   return 1;
 }
-function calculoSalarial(oSalario){
+function calcularIdade(oAno){
+
+  const anoAtual = newDate().getFullYear();
+
+  return anoAtual - oAno;
+}
+function calculoSalarial(oSalario, oAnoNascimento){
 
   let valorBonusPorPosicao = calcularBonusPorPosicao();
-  let valorBonusPorIdade = calcularBonusPorIdade();
+
+  let idade = calcularIdade(oAnoNascimento);
+  let valorBonusPorIdade = calcularBonusPorIdade(idade);
+
 
   return oSalario +valorBonusPorIdade + valorBonusPorPosicao
 }
