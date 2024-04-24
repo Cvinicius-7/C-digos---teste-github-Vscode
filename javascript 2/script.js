@@ -22,12 +22,10 @@ function escolhaPosicao(){
 
 const qdeJogador = 3;
 
-let nomes = [];
-let posicoes = [];
 let jogadores = [];
 
 for(let i = 0; i<qdeJogador; i++){
-  
+
     let nome = prompt("Digite o nome do jogador "  + (i+1) + ":");
     let posicao = escolhaPosicao();
     let camisa = parseInt(prompt("Digite a camisa do jogador "  + nome + ":"));
@@ -46,5 +44,5 @@ for(let i = 0; i<qdeJogador; i++){
   }
 
   for(let i=0; i<qdeJogador; i++){
-    alert("Nome: " + nomes[i] + " - posição: " + posicoes[i]);
+    alert("Nome: " + jogadores[i].nome + " - posição: " + jogadores[i].posicao);
   }
