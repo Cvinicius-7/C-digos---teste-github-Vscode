@@ -10,9 +10,14 @@
 
 function escolhaPosicao(){
     let dominio = ["goleiro", "zagueiro", "meia", "atacante"];
-    let posicao = parseInt(prompt("Digite a posição do jogador: \n 1-Goleiro \n 2-Zagueiro \n 3-Meia \n 4-Atacante"));
-  
-    return dominio[posicao-1];
+
+    let posicao;
+
+  do{
+    posicao = parseInt(prompt("Digite a posição do jogador: \n 1-Goleiro \n 2-Zagueiro \n 3-Meia \n 4-Atacante"));
+  }while(posicao < 1 || posicao > dominio.length);
+
+  return dominio[posicao-1];
   }
 
 const qdeJogador = 3;
