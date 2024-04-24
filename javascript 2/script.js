@@ -20,6 +20,13 @@ function escolhaPosicao(){
   return dominio[posicao-1];
   }
 
+function impressao(osJogadores){
+  for(let i=0; i<osJogadores.length; i++){
+    alert("Nome: " + osJogadores[i].nome + " - posição: " + osJogadores[i].posicao);
+  }
+
+}
+
 const qdeJogador = 3;
 
 let jogadores = [];
@@ -42,7 +49,4 @@ for(let i = 0; i<qdeJogador; i++){
       }
     );
   }
-
-  for(let i=0; i<qdeJogador; i++){
-    alert("Nome: " + jogadores[i].nome + " - posição: " + jogadores[i].posicao);
-  }
+impressao(jogadores);
