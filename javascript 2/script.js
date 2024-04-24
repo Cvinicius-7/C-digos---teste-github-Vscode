@@ -27,12 +27,13 @@ function impressao(osJogadores) {
 function calcularBonusPorIdade(aIdade){
 
     if(aIdade <=20){
-
+      return 1;
     }else if(aIdade >40){
+      return 0,5;
+    }else{
+    return 2;
+    }
 
-    }else
-
-  return 1;
 }
 function calcularBonusPorPosicao(){
 
@@ -49,7 +50,7 @@ function calculoSalarial(oSalario, oAnoNascimento){
   let valorBonusPorPosicao = calcularBonusPorPosicao();
 
   let idade = calcularIdade(oAnoNascimento);
-  let valorBonusPorIdade = calcularBonusPorIdade(idade);
+  let valorBonusPorIdade = oSalario * calcularBonusPorIdade(idade);
 
 
   return oSalario +valorBonusPorIdade + valorBonusPorPosicao
