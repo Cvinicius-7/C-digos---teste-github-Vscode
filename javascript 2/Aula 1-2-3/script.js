@@ -18,9 +18,10 @@ function escolhaPosicao() {
 function impressao(osJogadores) {
   osJogadores.forEach((func, index) => {
 
-    let salarioLiquido = calculoSalarial(func.salario, func.anoNascimento, func.posicao);
+    let idade = calcularIdade(func.anoNascimento);
+    let salarioLiquido = calculoSalarial(func.salario, func.anoNascimento, func.posicao,func.camisa);
 
-    alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao + " - salário: " + func.salario + " - salário Líquido: " + salarioLiquido);
+    alert((index + 1) + "Nome: " + func.nome + " - Idade: " + idade +" - Posição: " + func.posicao +" - Camisa: "+ func.camisa +" - Salário: " + func.salario + " - Salário Líquido: " + salarioLiquido);
   });
 }
 function calcularBonusPorIdade(aIdade) {
@@ -69,26 +70,33 @@ function calculoSalarial(oSalario, oAnoNascimento, aPosicao) {
 
   return oSalario + valorBonusPorIdade + valorBonusPorPosicao
 }
+function obterJogadores(){
+  let jogadores = [];
 
-const qdeJogador = 1;
-let jogadores = [];
+  for (let i = 0; i < qdeJogador; i++) {
 
-for (let i = 0; i < qdeJogador; i++) {
-
-  let nome = prompt("Digite o nome do jogador " + (i + 1) + ":");
-  let posicao = escolhaPosicao();
-  let camisa = parseInt(prompt("Digite a camisa do jogador " + nome + ":"));
-  let anoNascimento = parseInt(prompt("Digite o ano de nascimento do jogador " + nome + ":"));
-  let salario = parseFloat(prompt("Digite o salário do jogador " + nome + ":"));
-
-  jogadores.push(
-    {
-      nome: nome,
-      posicao: posicao,
-      camisa: camisa,
-      anoNascimento: anoNascimento,
-      salario: salario
-    }
-  );
+    let nome = prompt("Digite o nome do jogador " + (i + 1) + ":");
+    let posicao = escolhaPosicao();
+    let camisa = parseInt(prompt("Digite a camisa do jogador " + nome + ":"));
+    let anoNascimento = parseInt(prompt("Digite o ano de nascimento do jogador " + nome + ":"));
+    let salario = parseFloat(prompt("Digite o salário do jogador " + nome + ":"));
+  
+    jogadores.push(
+      {
+        nome: nome,
+        posicao: posicao,
+        camisa: camisa,
+        anoNascimento: anoNascimento,
+        salario: salario
+      }
+    );
+  }
+  return jogadores
 }
-impressao(jogadores);
+
+const qdeJogador = parseInt(prompt("Digite a quantidade de jogadores"));
+
+let osJogadores = obterJogadores();
+
+
+impressao(osJogadores);
