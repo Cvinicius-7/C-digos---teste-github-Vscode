@@ -15,47 +15,62 @@ function escolhaPosicao() {
 
   return dominio[posicao - 1];
 }
-
 function impressao(osJogadores) {
   osJogadores.forEach((func, index) => {
 
-    let salarioLiquido = calculoSalarial(func.salario, func.anoNascimento);  
+    let salarioLiquido = calculoSalarial(func.salario, func.anoNascimento, func.posicao);
 
     alert((index + 1) + "Nome: " + func.nome + " - posição: " + func.posicao + " - salário: " + func.salario + " - salário Líquido: " + salarioLiquido);
   });
 }
-function calcularBonusPorIdade(aIdade){
+function calcularBonusPorIdade(aIdade) {
 
-    if(aIdade <=20){
-      return 1;
-    }else if(aIdade >40){
-      return 0,5;
-    }else{
+  if (aIdade <= 20) {
+    return 1;
+  } else if (aIdade > 40) {
+    return 0, 5;
+  } else {
     return 2;
-    }
+  }
 
 }
-function calcularBonusPorPosicao(){
+function calcularBonusPorPosicao(aPosicao) {
+
+  switch (aPosicao) {
+    case "goleiro":
+      return 0.20;
+
+    case "Zagueiro":
+    case "lateral":
+      return 0.15;
+
+    case "meia":
+    case "atacante":
+      return 0.30;
+
+    default:
+      return 0;
+  }
 
 }
-function calcularIdade(oAno){
+function calcularIdade(oAno) {
 
   const anoAtual = new Date().getFullYear();
 
   return anoAtual - oAno;
 }
-function calculoSalarial(oSalario, oAnoNascimento){
+function calculoSalarial(oSalario, oAnoNascimento, aPosicao) {
 
-  let valorBonusPorPosicao = calcularBonusPorPosicao();
+  let valorBonusPorPosicao = oSalario * calcularBonusPorPosicao(aPosicao);
 
   let idade = calcularIdade(oAnoNascimento);
   let valorBonusPorIdade = oSalario * calcularBonusPorIdade(idade);
 
 
-  return oSalario +valorBonusPorIdade + valorBonusPorPosicao
+  return oSalario + valorBonusPorIdade + valorBonusPorPosicao
 }
 
-const qdeJogador = 3;
+const qdeJogador = 1;
 let jogadores = [];
 
 for (let i = 0; i < qdeJogador; i++) {
