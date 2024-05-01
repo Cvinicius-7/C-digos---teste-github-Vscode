@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 4</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+
+        let colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+        let index = 0;
+
+        function div1Click() {
+        const div = document.getElementById('div_1');
+        div.style.backgroundColor = colors[index];
+        index = (index + 1) % colors.length;
+    }
+
+    </script>
 </head>
 <body>
-    <div id="div_1">
+    <div id="div_1" onclick="div1Click()">
         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui alias voluptatem iusto. Quaerat perspiciatis optio nihil, quia sapiente laborum mollitia nemo tempora explicabo magni, libero ut. Natus, aspernatur eius. Debitis.</P>
     </div>
 </body>
