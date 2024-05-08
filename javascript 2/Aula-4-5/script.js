@@ -11,7 +11,7 @@ inclusaoCurso("Engenharia");
 inclusaoCurso("Eng. Comp");
 inclusaoCurso("Programação Web");
 
-function inclusaoCurso(oCurso){
+function inclusaoCurso(oCurso) {
   cursos.push(oCurso);
 
   let select = document.getElementById("curso");
@@ -23,7 +23,6 @@ function inclusaoCurso(oCurso){
 }
 
 function inclusao() {
-
   let nome = document.getElementById("nome").value;
   let professor = document.getElementById("professor").value;
   let curso = document.getElementById("curso").value;
@@ -34,29 +33,36 @@ function inclusao() {
 }
 
 function incluir(nome, professor, curso) {
-
   nextId++;
-  
+
   let disciplina = {
     id: nextId,
     nome: nome,
     professor: professor,
-    curso: curso
+    curso: curso,
   };
 
   disciplinas.push(disciplina);
 }
 
-function alteracao(oIndex){
-
-  let novoNome = prompt("Informe o novo nome da disciplina", disciplinas[oIndex].nome);
-  let novoProfessor = prompt("Informe o novo professor da disciplina", disciplinas[oIndex].professor);
-  let novoCurso = prompt("Informe o novo curso da disciplina", disciplinas[oIndex].curso);
+function alteracao(oIndex) {
+  let novoNome = prompt(
+    "Informe o novo nome da disciplina",
+    disciplinas[oIndex].nome
+  );
+  let novoProfessor = prompt(
+    "Informe o novo professor da disciplina",
+    disciplinas[oIndex].professor
+  );
+  let novoCurso = prompt(
+    "Informe o novo curso da disciplina",
+    disciplinas[oIndex].curso
+  );
 
   disciplinas[oIndex].nome = novoNome;
   disciplinas[oIndex].professor = novoProfessor;
   disciplinas[oIndex].curso = novoCurso;
-  
+
   atualizarTable();
 }
 
@@ -72,12 +78,13 @@ function excluir(oIndex) {
 
 function obterLista() {
   disciplinas.forEach((disciplina) => {
-    console.log(`${disciplina.id} | ${disciplina.nome} | ${disciplina.professor} | ${disciplina.curso}`);
+    console.log(
+      `${disciplina.id} | ${disciplina.nome} | ${disciplina.professor} | ${disciplina.curso}`
+    );
   });
 }
 
 function atualizarTable() {
-
   let tbody = document.querySelector("#tabela-disciplinas tbody");
 
   divDisciplinas.style.display = "none";
@@ -97,7 +104,7 @@ function atualizarTable() {
     tbody.appendChild(tr);
   });
 
-  if(disciplinas.length > 0){
+  if (disciplinas.length > 0) {
     divDisciplinas.style.display = "block";
   }
 }
