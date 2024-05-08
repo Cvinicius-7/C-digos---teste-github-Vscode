@@ -6,20 +6,23 @@ let nextId = 0;
 let divDisciplinas = document.getElementById("div-disciplinas");
 divDisciplinas.style.display = "none";
 
-inclusaoCurso("Computação");
-inclusaoCurso("Engenharia");
-inclusaoCurso("Eng. Comp");
-inclusaoCurso("Programação Web");
+inclusaoCurso("Computação",document.getElementById("curso"));
+inclusaoCurso("Engenharia",document.getElementById("curso"));
+inclusaoCurso("Eng. Comp",document.getElementById("curso"));
+inclusaoCurso("Programação Web",document.getElementById("curso"));
 
-function inclusaoCurso(oCurso) {
-  cursos.push(oCurso);
+inclusaoCurso("Computação",document.getElementById("curso-filtro"));
+inclusaoCurso("Engenharia",document.getElementById("curso-filtro"));
+inclusaoCurso("Eng. Comp",document.getElementById("curso-filtro"));
+inclusaoCurso("Programação Web",document.getElementById("curso-filtro"));
 
-  let select = document.getElementById("curso");
+function inclusaoCurso(oCurso,oSelect) {
+  //cursos.push(oCurso);
 
   let option = document.createElement("option");
   option.text = oCurso;
   option.value = oCurso;
-  select.add(option);
+  oSelect.add(option);
 }
 
 function inclusao() {
