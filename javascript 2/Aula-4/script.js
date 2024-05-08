@@ -10,5 +10,11 @@ function incluir(disciplina, professor){
 
     disciplinas.push(disciplina);
 }
-alert(disciplinas.length)
-alert(disciplinas[0].nome)
+function obterLista(){
+    disciplinas.forEach(disciplina => {
+        alert (`${disciplina.id} | ${disciplina.nome} | ${disciplina.professor}`);
+    });
+}
+incluir(teste)
+
+obterLista();
