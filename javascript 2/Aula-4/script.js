@@ -1,38 +1,51 @@
 let disciplinas = [];
 
-function inclusao(){
-    let nome = document.getElementById("nome").value;
-    let professor = document.getElementById("professor").value;
-    let curso = document.getElementById("curso").value;
+let nextId = 0;
 
-    incluir(nome, professor, curso);
+function inclusao() {
+  let nome = document.getElementById("nome").value;
+  let professor = document.getElementById("professor").value;
+  let curso = document.getElementById("curso").value;
 
-    atualizarTable();
+  incluir(nome, professor, curso);
+
+  atualizarTable();
 }
 
-function incluir(nome, professor, curso){
-    let disciplina = {
-        id: disciplinas.length +1,
-        nome: nome,
-        professor: professor,
-        curso: curso
-    };
+function incluir(nome, professor, curso) {
 
-    disciplinas.push(disciplina);
-}
-function obterLista(){
-    disciplinas.forEach(disciplina => {
-        alert (`${disciplina.id} | ${disciplina.nome} | ${disciplina.professor} | ${disciplina.curso}`);
-    });
+    nextId++;
+
+  let disciplina = {
+    id: nextId,
+    nome: nome,
+    professor: professor,
+    curso: curso,
+  };
+
+  disciplinas.push(disciplina);
 }
 
-function atualizarTable(){
-    let tbody = document.querySelector("#main-table tbody");
+function excluir(oIndex) {
+  disciplinas.splice(oIndex, 1);
+  atualizarTable();
+}
 
-    tbody.innerHTML ="";
-    disciplinas.forEach((disciplina,index)=>{
-        let tr = document.createElement("tr");
-        tr.innerHTML =`
+function obterLista() {
+  disciplinas.forEach((disciplina) => {
+    alert(
+      `${disciplina.id} | ${disciplina.nome} | ${disciplina.professor} | ${disciplina.curso}`
+    );
+  });
+}
+
+function atualizarTable() {
+  let tbody = document.querySelector("#main-table tbody");
+
+  tbody.innerHTML = "";
+  disciplinas.forEach((disciplina, index) => {
+    let tr = document.createElement("tr");
+    tr.innerHTML = `
         <td>${disciplina.id}</td>
         <td>${disciplina.nome}</td>
         <td>${disciplina.professor}</td>
@@ -40,10 +53,8 @@ function atualizarTable(){
         <td><button type="button" class="btn btn-link" onclick="alterar(${index})">Alterar</button></td>
 <td><button type="button" class="btn btn-link" onclick="excluir(${index})">Excluir</button></td>
         `;
-        tbody.appendChild(tr)
-});
-
+    tbody.appendChild(tr);
+  });
 }
-
 
 obterLista();
