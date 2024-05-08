@@ -41,6 +41,9 @@ function obterLista() {
 
 function atualizarTable() {
   let tbody = document.querySelector("#main-table tbody");
+ let divDisciplinas = document.getElementById("div-disciplinas");
+
+ divDisciplinas.style.display = "none";
 
   tbody.innerHTML = "";
   disciplinas.forEach((disciplina, index) => {
@@ -55,6 +58,9 @@ function atualizarTable() {
         `;
     tbody.appendChild(tr);
   });
+  if(disciplinas.length>0){
+  divDisciplinas.style.display = "block";
+  }
 }
 
 obterLista();
