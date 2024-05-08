@@ -13,8 +13,7 @@ function inclusao() {
 }
 
 function incluir(nome, professor, curso) {
-
-    nextId++;
+  nextId++;
 
   let disciplina = {
     id: nextId,
@@ -41,9 +40,9 @@ function obterLista() {
 
 function atualizarTable() {
   let tbody = document.querySelector("#main-table tbody");
- let divDisciplinas = document.getElementById("div-disciplinas");
+  let divDisciplinas = document.getElementById("div-disciplinas");
 
- divDisciplinas.style.display = "none";
+  divDisciplinas.style.display = "none";
 
   tbody.innerHTML = "";
   disciplinas.forEach((disciplina, index) => {
@@ -58,8 +57,8 @@ function atualizarTable() {
         `;
     tbody.appendChild(tr);
   });
-  if(disciplinas.length>0){
-  divDisciplinas.style.display = "block";
+  if (disciplinas.length > 0) {
+    divDisciplinas.style.display = "block";
   }
 }
 
