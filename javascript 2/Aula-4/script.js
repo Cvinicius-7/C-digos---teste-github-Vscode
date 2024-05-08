@@ -24,6 +24,17 @@ function incluir(nome, professor, curso) {
 
   disciplinas.push(disciplina);
 }
+function alterar(oIndex){
+    let novoNome = prompt("Informe o Novo nome da disciplina",disciplinas[oIndex].nome);
+    let novoProfessor = prompt("Informe o Novo nome da disciplina",disciplinas[oIndex].professor);
+    let novoCurso = prompt("Informe o Novo nome da disciplina",disciplinas[oIndex].curso);
+
+    disciplinas[oIndex].nome = novoNome;
+    disciplinas[oIndex].professor = novoProfessor;
+    disciplinas[oIndex].curso = novoCurso;
+
+    atualizarTable()
+}
 
 function excluir(oIndex) {
   disciplinas.splice(oIndex, 1);
@@ -45,8 +56,11 @@ function atualizarTable() {
   divDisciplinas.style.display = "none";
 
   tbody.innerHTML = "";
+
   disciplinas.forEach((disciplina, index) => {
+
     let tr = document.createElement("tr");
+
     tr.innerHTML = `
         <td>${disciplina.id}</td>
         <td>${disciplina.nome}</td>
