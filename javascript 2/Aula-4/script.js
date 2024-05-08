@@ -15,6 +15,7 @@ function obterLista(){
         alert (`${disciplina.id} | ${disciplina.nome} | ${disciplina.professor}`);
     });
 }
-incluir(teste)
+
+incluir("teste");
 
 obterLista();
