@@ -6,10 +6,11 @@ function inclusao(){
     let curso = document.getElementById("curso").value;
 
     incluir(nome, professor, curso);
+
+    atualizarTable();
 }
 
-function incluir(disciplina, professor, curso){
-
+function incluir(nome, professor, curso){
     let disciplina = {
         id: disciplinas.length +1,
         nome: nome,
@@ -27,6 +28,21 @@ function obterLista(){
 
 function atualizarTable(){
     let tbody = document.querySelector("#main-table tbody");
+
+    tbody.innerHTML ="";
+    disciplinas.forEach((disciplina,index)=>{
+        let tr = document.createElement("tr");
+        tr.innerHTML =`
+        <td>${disciplina.id}</td>
+        <td>${disciplina.nome}</td>
+        <td>${disciplina.professor}</td>
+        <td>${disciplina.curso}</td>
+        <td><button type="button" class="btn btn-link" onclick="alterar(${index})">Alterar</button></td>
+<td><button type="button" class="btn btn-link" onclick="excluir(${index})">Excluir</button></td>
+        `;
+        tbody.appendChild(tr)
+});
+
 }
 
 
