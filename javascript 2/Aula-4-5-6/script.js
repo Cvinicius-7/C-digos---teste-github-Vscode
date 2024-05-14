@@ -20,12 +20,11 @@ function filtrarPorCurso() {
   let curso = document.getElementById("curso-filtro").value;
 
   if (curso == "") {
-   
     atualizarTable();
   } else {
-
-
-    let disciplinasFilter = disciplinas.filter(disciplina => curso == disciplina.curso);
+    let disciplinasFilter = disciplinas.filter(
+      (disciplina) => curso == disciplina.curso
+    );
 
     atualizarTable(disciplinasFilter);
   }
@@ -43,7 +42,10 @@ function inclusaoCurso(oCurso, oSelect) {
 function inclusao() {
   let nome = document.getElementById("nome").value;
   let professor = document.getElementById("professor").value;
-  let curso = document.getElementById("curso").options[document.getElementById("curso").selectedIndex].value;
+  let curso =
+    document.getElementById("curso").options[
+      document.getElementById("curso").selectedIndex
+    ].value;
 
   incluir(nome, professor, curso);
 
