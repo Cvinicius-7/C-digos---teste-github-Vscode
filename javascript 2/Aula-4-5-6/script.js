@@ -25,7 +25,7 @@ function filtrarPorCurso(){
   }else{
     alert("buscar por curso " + curso);
 
-    disciplinas.filter(disciplina => curso == disciplina.curso );
+    let disciplinasFilter = disciplinas.filter(disciplina => curso == disciplina.curso );
 
     atualizarTable(curso);
   }
@@ -104,10 +104,14 @@ function obterLista() {
 }
 
 function atualizarTable(disciplinasFiltradas = null) {
+
+  let disciplinasExibir;
+
+
   if(disciplinasFiltradas == null){
-    alert("nenhum parametro passado");
+    disciplinasExibir = disciplinas;
   }else{
-    alert("mensagem" + disciplinasFiltradas);
+    disciplinasExibir = disciplinasFiltradas;
   }
   let tbody = document.querySelector("#tabela-disciplinas tbody");
 
@@ -115,7 +119,7 @@ function atualizarTable(disciplinasFiltradas = null) {
 
   tbody.innerHTML = "";
 
-  disciplinas.forEach((disciplina, index) => {
+  disciplinasExibir.forEach((disciplina, index) => {
     let tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${disciplina.id}</td>
