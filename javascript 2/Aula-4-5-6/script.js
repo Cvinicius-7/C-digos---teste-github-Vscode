@@ -6,33 +6,32 @@ let nextId = 0;
 let divDisciplinas = document.getElementById("div-disciplinas");
 divDisciplinas.style.display = "none";
 
-inclusaoCurso("Computação",document.getElementById("curso"));
-inclusaoCurso("Engenharia",document.getElementById("curso"));
-inclusaoCurso("Eng. Comp",document.getElementById("curso"));
-inclusaoCurso("Programação Web",document.getElementById("curso"));
+inclusaoCurso("Computação", document.getElementById("curso"));
+inclusaoCurso("Engenharia", document.getElementById("curso"));
+inclusaoCurso("Eng. Comp", document.getElementById("curso"));
+inclusaoCurso("Programação Web", document.getElementById("curso"));
 
-inclusaoCurso("Computação",document.getElementById("curso-filtro"));
-inclusaoCurso("Engenharia",document.getElementById("curso-filtro"));
-inclusaoCurso("Eng. Comp",document.getElementById("curso-filtro"));
-inclusaoCurso("Programação Web",document.getElementById("curso-filtro"));
+inclusaoCurso("Computação", document.getElementById("curso-filtro"));
+inclusaoCurso("Engenharia", document.getElementById("curso-filtro"));
+inclusaoCurso("Eng. Comp", document.getElementById("curso-filtro"));
+inclusaoCurso("Programação Web", document.getElementById("curso-filtro"));
 
-function filtrarPorCurso(){
+function filtrarPorCurso() {
   let curso = document.getElementById("curso-filtro").value;
 
-  if(curso == ""){
-    alert("busar todos os cursos");
+  if (curso == "") {
+   
     atualizarTable();
-  }else{
-    alert("buscar por curso " + curso);
+  } else {
 
-    let disciplinasFilter = disciplinas.filter(disciplina => curso == disciplina.curso );
 
-    atualizarTable(curso);
+    let disciplinasFilter = disciplinas.filter(disciplina => curso == disciplina.curso);
+
+    atualizarTable(disciplinasFilter);
   }
 }
 
-
-function inclusaoCurso(oCurso,oSelect) {
+function inclusaoCurso(oCurso, oSelect) {
   cursos.push(oCurso);
 
   let option = document.createElement("option");
@@ -44,7 +43,7 @@ function inclusaoCurso(oCurso,oSelect) {
 function inclusao() {
   let nome = document.getElementById("nome").value;
   let professor = document.getElementById("professor").value;
-  let curso = document.getElementById("curso").value;
+  let curso = document.getElementById("curso").options[document.getElementById("curso").selectedIndex].value;
 
   incluir(nome, professor, curso);
 
@@ -104,16 +103,14 @@ function obterLista() {
 }
 
 function atualizarTable(disciplinasFiltradas = null) {
-
   let disciplinasExibir;
 
-  if(disciplinasFiltradas == null){
+  if (disciplinasFiltradas == null) {
     disciplinasExibir = disciplinas;
-  }else{
+  } else {
     disciplinasExibir = disciplinasFiltradas;
   }
 
-  
   let tbody = document.querySelector("#tabela-disciplinas tbody");
 
   divDisciplinas.style.display = "none";
