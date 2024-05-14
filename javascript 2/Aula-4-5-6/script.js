@@ -107,12 +107,13 @@ function atualizarTable(disciplinasFiltradas = null) {
 
   let disciplinasExibir;
 
-
   if(disciplinasFiltradas == null){
     disciplinasExibir = disciplinas;
   }else{
     disciplinasExibir = disciplinasFiltradas;
   }
+
+  
   let tbody = document.querySelector("#tabela-disciplinas tbody");
 
   divDisciplinas.style.display = "none";
