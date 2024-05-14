@@ -43,8 +43,8 @@
         <hr>
         <h6>Listagem de disciplinas</h6>
         <div class="col">
-            <select id="curso-filtro" class="form-select">
-                <option disabled>Selecione um curso</option>
+            <select id="curso-filtro" class="form-select" onchange="filtrarPorCurso()">
+                <option value="">Todos</option>
             </select>
         </div>
         <table id="tabela-disciplinas" class="table table-striped">

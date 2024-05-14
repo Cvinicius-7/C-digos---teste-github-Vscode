@@ -16,8 +16,13 @@ inclusaoCurso("Engenharia",document.getElementById("curso-filtro"));
 inclusaoCurso("Eng. Comp",document.getElementById("curso-filtro"));
 inclusaoCurso("Programação Web",document.getElementById("curso-filtro"));
 
+function filtrarPorCurso(){
+  let curso = document.getElementById("curso-filtro").value;
+}
+
+
 function inclusaoCurso(oCurso,oSelect) {
-  //cursos.push(oCurso);
+  cursos.push(oCurso);
 
   let option = document.createElement("option");
   option.text = oCurso;
