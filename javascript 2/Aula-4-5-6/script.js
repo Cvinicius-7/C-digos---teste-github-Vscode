@@ -18,6 +18,17 @@ inclusaoCurso("Programação Web",document.getElementById("curso-filtro"));
 
 function filtrarPorCurso(){
   let curso = document.getElementById("curso-filtro").value;
+
+  if(curso == ""){
+    alert("busar todos os cursos");
+    atualizarTable();
+  }else{
+    alert("buscar por curso " + curso);
+
+    disciplinas.filter(disciplina => curso == disciplina.curso );
+
+    atualizarTable(curso);
+  }
 }
 
 
@@ -92,7 +103,12 @@ function obterLista() {
   });
 }
 
-function atualizarTable() {
+function atualizarTable(disciplinasFiltradas = null) {
+  if(disciplinasFiltradas == null){
+    alert("nenhum parametro passado");
+  }else{
+    alert("mensagem" + disciplinasFiltradas);
+  }
   let tbody = document.querySelector("#tabela-disciplinas tbody");
 
   divDisciplinas.style.display = "none";
