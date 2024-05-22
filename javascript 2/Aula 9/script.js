@@ -1,11 +1,8 @@
 //registrar uma venda
 function validarCamposObrigatorios(produto, quantidade, preco, data){
-    if (produto && quantidade && preco && data){
-        return true;
-    }else{
-        return false;
-    }
-
+    
+    return (produto && quantidade && preco && data) ? true: false;
+    
 }
 
 function registrarVenda() {
