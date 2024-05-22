@@ -13,13 +13,15 @@ function validarQuantidadeProdutos(quantidade) {
 function validarPrecoUnitario(preco){
     return preco > 0;
 }
-
+function obterDataTransacao(){
+ return new Date().toLocaleString();
+}
 
 function registrarVenda() {
     let produto = "refrigerante";
     let quantidade = 2;
     let preco = 6;
-    let data = new Date().toLocaleString();
+    let data = obterDataTransacao();
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
