@@ -3,18 +3,18 @@ function validarCamposObrigatorios(produto, quantidade, preco, data) {
 
     //return (produto && quantidade && preco && data) ? true: false;
 
-    return produto && quantidade !=null && preco !=null && data;
+    return produto && quantidade != null && preco != null && data;
 
 }
 function validarQuantidadeProdutos(quantidade) {
     return quantidade > 0;
 
 }
-function validarPrecoUnitario(preco){
+function validarPrecoUnitario(preco) {
     return preco > 0;
 }
-function obterDataTransacao(){
- return new Date().toLocaleString();
+function obterDataTransacao() {
+    return new Date().toLocaleString();
 }
 
 function registrarVenda() {
@@ -28,12 +28,12 @@ function registrarVenda() {
     let validaPreco = validarPrecoUnitario(preco);
 
     if (validaCampos) {
-        if (validaProdutos){
-            if(validaPreco){
-            alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
-        }else{
-            alert("Preco unitario invalido !")
-        }
+        if (validaProdutos) {
+            if (validaPreco) {
+                alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
+            } else {
+                alert("Preco unitario invalido !")
+            }
         } else {
             alert("Problema na validacao da quantidade de produtos !");
         }
