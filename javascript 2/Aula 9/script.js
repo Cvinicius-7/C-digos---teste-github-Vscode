@@ -6,6 +6,10 @@ function validarCamposObrigatorios(produto, quantidade, preco, data) {
     return produto && quantidade && preco && data;
 
 }
+function validarQuantidadeProdutos(quantidade) {
+    return quantidade > 0;
+
+}
 
 function registrarVenda() {
     let produto = "refrigerante";
@@ -14,12 +18,16 @@ function registrarVenda() {
     let data = "2023-06-01";
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
+    let validaProdutos = validarQuantidadeProdutos(quantidade);
 
     if (validaCampos) {
-        alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
-
+        if (validaProdutos) {
+            alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
+        } else {
+            alert("Problema na validacao da quantidade de produtos !");
+        }
     } else {
-        alert("problemas na venda!")
+        alert("problemas na venda!");
     }
 }
 registrarVenda();
