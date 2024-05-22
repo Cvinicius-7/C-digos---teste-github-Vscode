@@ -14,11 +14,12 @@ function validarPrecoUnitario(preco){
     return preco > 0;
 }
 
+
 function registrarVenda() {
     let produto = "refrigerante";
     let quantidade = 2;
     let preco = 6;
-    let data = "2023-06-01";
+    let data = new Date().toLocaleString();
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
