@@ -16,12 +16,15 @@ function validarPrecoUnitario(preco) {
 function obterDataTransacao() {
     return new Date().toLocaleString();
 }
-
+function gerarNumeroTransacao(){
+    return Math.floor(Math.random() * 100000);
+}
 function registrarVenda() {
     let produto = "refrigerante";
     let quantidade = 2;
     let preco = 6;
     let data = obterDataTransacao();
+    let numeroTransacao = gerarNumeroTransacao();
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
@@ -30,7 +33,7 @@ function registrarVenda() {
     if (validaCampos) {
         if (validaProdutos) {
             if (validaPreco) {
-                alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
+                alert("("+ numeroTransacao+") Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
             } else {
                 alert("Preco unitario invalido !")
             }
