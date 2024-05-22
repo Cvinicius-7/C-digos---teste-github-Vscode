@@ -19,10 +19,10 @@ function obterDataTransacao() {
 function gerarNumeroTransacao(){
     return Math.floor(Math.random() * 100000);
 }
-function registrarVenda() {
-    let produto = "refrigerante";
-    let quantidade = 2;
-    let preco = 6;
+function registrarVenda(produto, quantidade, preco) {
+    let produto;
+    let quantidade;
+    let preco;
     let data = obterDataTransacao();
     let numeroTransacao = gerarNumeroTransacao();
 
@@ -44,4 +44,4 @@ function registrarVenda() {
         alert("problemas na venda!");
     }
 }
-registrarVenda();
+registrarVenda("refrigerante,", 2, 7);
