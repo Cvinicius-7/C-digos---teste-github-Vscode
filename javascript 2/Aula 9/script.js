@@ -3,15 +3,15 @@ function validarCamposObrigatorios(produto, quantidade, preco, data) {
 
     //return (produto && quantidade && preco && data) ? true: false;
 
-    return produto && quantidade !=null && preco && data;
+    return produto && quantidade !=null && preco !=null && data;
 
 }
 function validarQuantidadeProdutos(quantidade) {
     return quantidade > 0;
 
 }
-function validarPrecoUnitario(){
-
+function validarPrecoUnitario(preco){
+    return preco > 0;
 }
 
 function registrarVenda() {
@@ -22,7 +22,7 @@ function registrarVenda() {
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
-    let validaPreco = validarPrecoUnitario();
+    let validaPreco = validarPrecoUnitario(preco);
 
     if (validaCampos) {
         if (validaProdutos){
