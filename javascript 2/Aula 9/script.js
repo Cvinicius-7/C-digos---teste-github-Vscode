@@ -3,7 +3,7 @@ function validarCamposObrigatorios(produto, quantidade, preco, data) {
 
     //return (produto && quantidade && preco && data) ? true: false;
 
-    return produto && quantidade && preco && data;
+    return produto && quantidade !=null && preco && data;
 
 }
 function validarQuantidadeProdutos(quantidade) {
