@@ -10,6 +10,9 @@ function validarQuantidadeProdutos(quantidade) {
     return quantidade > 0;
 
 }
+function validarPrecoUnitario(){
+
+}
 
 function registrarVenda() {
     let produto = "refrigerante";
@@ -19,10 +22,15 @@ function registrarVenda() {
 
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
+    let validaPreco = validarPrecoUnitario();
 
     if (validaCampos) {
-        if (validaProdutos) {
+        if (validaProdutos){
+            if(validaPreco){
             alert("Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
+        }else{
+            alert("Preco unitario invalido !")
+        }
         } else {
             alert("Problema na validacao da quantidade de produtos !");
         }
