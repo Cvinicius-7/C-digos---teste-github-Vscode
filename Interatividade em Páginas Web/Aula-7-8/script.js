@@ -7,8 +7,8 @@ function adicionar(){
     if(!a_nomes.includes(nome)){
         a_nomes.push(nome);
         var item = document.createElement("li");
-        item.innerHTML = nome;
-        item.onclick = increment_vote;
+        item.innerHTML = nome + " <span>0</span>";
+        item.setAttribute("onclick", "increment_vote(this)");
         document.getElementById("lista").appendChild(item);
     }
 }
