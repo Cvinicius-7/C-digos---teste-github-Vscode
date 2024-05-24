@@ -44,4 +44,12 @@ function registrarVenda(produto, quantidade, preco) {
         alert("problemas na venda!");
     }
 }
-registrarVenda("refrigerante,", 2, 7);
+function vender(){
+
+    const produto = document.getElementById("produto").value;
+    const quantidade = document.getElementById("quantidade").value;
+    const preco = document.getElementById("preco").value;
+
+
+    registrarVenda(produto,quantidade,preco);
+}
