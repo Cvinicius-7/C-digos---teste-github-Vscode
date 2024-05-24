@@ -55,6 +55,6 @@ function vender(){
 
     const historicoVendas = document.getElementById("historicoVendas");
     const li = document.createElement("li");
-    li.textContent = "mensagem"
+    li.textContent = "mensagem";
     historicoVendas.appendChild(li);
 }
