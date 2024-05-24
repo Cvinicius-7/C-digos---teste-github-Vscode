@@ -33,7 +33,7 @@ function registrarVenda(produto, quantidade, preco) {
     if (validaCampos) {
         if (validaProdutos) {
             if (validaPreco) {
-                alert("("+ numeroTransacao+") Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
+                return alert("("+ numeroTransacao+") Venda registrada !" + produto + ", " + quantidade + "unidades , R$" + preco + "por unidade em, " + data);
             } else {
                 alert("Preco unitario invalido !")
             }
@@ -51,5 +51,10 @@ function vender(){
     const preco = document.getElementById("preco").value;
 
 
-    registrarVenda(produto,quantidade,preco);
+    let mensagem = registrarVenda(produto,quantidade,preco);
+
+    const historicoVendas = document.getElementById("historicoVendas");
+    const li = document.createElement("li");
+    li.textContent = "mensagem"
+    historicoVendas.appendChild(li);
 }
