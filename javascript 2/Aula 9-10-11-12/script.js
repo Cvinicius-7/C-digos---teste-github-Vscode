@@ -15,7 +15,7 @@ function obterDataTransacao() {
     return new Date().toLocaleString();
 }
 
-function gerarNumeroTransacao(){
+function gerarNumeroTransacao() {
     return Math.floor(Math.random() * 100000);
 }
 
@@ -41,13 +41,17 @@ function registrarVenda(produto, quantidade, preco) {
         return "Problemas na venda!";
     }
 }
-
-function vender(){
+function vender() {
     const produto = document.getElementById("produto").value;
     const quantidade = document.getElementById("quantidade").value;
     const preco = document.getElementById("preco").value;
 
-    let mensagem = registrarVenda(produto,quantidade,preco);
+    let mensagem = registrarVenda(produto, quantidade, preco);
+
+    registrarHistorico(mensagem);
+}
+
+function registrarHistorico(mensagem) {
 
     const historicoVendas = document.getElementById("historicoVendas");
     const li = document.createElement("li");
