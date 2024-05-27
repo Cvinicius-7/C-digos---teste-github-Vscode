@@ -30,15 +30,15 @@ function registrarVenda(produto, quantidade, preco) {
     if (validaCampos) {
         if (validaProdutos) {
             if (validaPreco) {
-                return "(" + numeroTransacao + ") Venda registrada ! " + produto + ", " + quantidade + " unidades, R$" + preco + " por unidade em, " + data;
+                return "(" + numeroTransacao + ") Venda registrada ! : " + produto + ", " + quantidade + " unidades, R$" + preco + " por unidade em, " + data;
             } else {
-                alert("Preço unitário inválido!");
+                return "Preço unitário inválido!";
             }
         } else {
-            alert("Problema na validação da quantidade de produtos!");
+            return "Problema na validação da quantidade de produtos!";
         }
     } else {
-        alert("Problemas na venda!");
+        return "Problemas na venda!";
     }
 }
 
