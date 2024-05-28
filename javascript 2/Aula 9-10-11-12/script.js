@@ -24,7 +24,12 @@ function validarQuantidadeProdutos(quantidade) {
 function validarPrecoUnitario(preco) {
     return preco > 0;
 }
-
+function validarEstoque() {
+    return false
+}
+function atualizarEstoque(){
+    
+}
 function obterDataTransacao() {
     return new Date().toLocaleString();
 }
@@ -40,11 +45,17 @@ function registrarVenda(produto, quantidade, preco) {
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
     let validaPreco = validarPrecoUnitario(preco);
+    let validaEstoque = validarEstoque();
 
     if (validaCampos) {
         if (validaProdutos) {
             if (validaPreco) {
-                return "(" + numeroTransacao + ") Venda registrada ! : " + produto + ", " + quantidade + " unidades, R$" + preco + " por unidade em, " + data;
+                if(validaEstoque){
+                    atualizarEstoque();
+                    return "(" + numeroTransacao + ") Venda registrada ! : " + produto + ", " + quantidade + " unidades, R$" + preco + " por unidade em, " + data;
+                }else{
+                    return "Problema na quantidade de itens no estoque"
+                }
             } else {
                 return "Preço unitário inválido!";
             }
