@@ -1,3 +1,17 @@
+const estoque ={
+    "Churrasco": {
+        "quantidade": 0,
+        "preco": 30.00
+    },
+    "Bauru": {
+        "quantidade": 20,
+        "preco": 12.00
+    },
+    "Empada": {
+        "quantidade": 15,
+        "preco": 10.00
+    }
+};
 
 function validarCamposObrigatorios(produto, quantidade, preco, data) {
     return produto && quantidade !== '' && preco !== '' && data;
