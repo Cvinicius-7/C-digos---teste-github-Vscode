@@ -1,14 +1,14 @@
 const estoque ={
     "Churrasco": {
-        "quantidade": 0,
+        "quantia": 0,
         "preco": 30.00
     },
     "Bauru": {
-        "quantidade": 20,
+        "quantia": 20,
         "preco": 12.00
     },
     "Empada": {
-        "quantidade": 15,
+        "quantia": 15,
         "preco": 10.00
     }
 };
@@ -24,9 +24,12 @@ function validarQuantidadeProdutos(quantidade) {
 function validarPrecoUnitario(preco) {
     return preco > 0;
 }
-function validarEstoque(produto) {
+function validarEstoque(produto, quantidade) {
     if(estoque[produto] != null){
-        return true;
+        if(estoque[produto].quantia >= quantidade){
+            return true;
+        }
+        
     }else{
         return false;
     }
@@ -50,7 +53,7 @@ function registrarVenda(produto, quantidade, preco) {
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
     let validaPreco = validarPrecoUnitario(preco);
-    let validaEstoque = validarEstoque(produto);
+    let validaEstoque = validarEstoque(produto, quantidade);
 
     if (validaCampos) {
         if (validaProdutos) {
