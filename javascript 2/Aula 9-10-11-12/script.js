@@ -1,5 +1,6 @@
 const estoque ={
     "Churrasco": {
+        
         "quantia": 0,
         "preco": 30.00
     },
@@ -35,7 +36,9 @@ function validarEstoque(produto, quantidade) {
     }
     
 }
-function atualizarEstoque(){
+function atualizarEstoque(produto,quantidade){
+    
+    estoque[produto].quantia = estoque[produto].quantia - quantidade;
 
 }
 function obterDataTransacao() {
@@ -59,7 +62,7 @@ function registrarVenda(produto, quantidade, preco) {
         if (validaProdutos) {
             if (validaPreco) {
                 if(validaEstoque){
-                    atualizarEstoque();
+                    atualizarEstoque(produto,quantidade);
                     return "(" + numeroTransacao + ") Venda registrada ! : " + produto + ", " + quantidade + " unidades, R$" + preco + " por unidade em, " + data;
                 }else{
                     return "Problema na quantidade de itens no estoque"
