@@ -24,11 +24,16 @@ function validarQuantidadeProdutos(quantidade) {
 function validarPrecoUnitario(preco) {
     return preco > 0;
 }
-function validarEstoque() {
-    return false
+function validarEstoque(produto) {
+    if(estoque[produto] != null){
+        return true;
+    }else{
+        return false;
+    }
+    
 }
 function atualizarEstoque(){
-    
+
 }
 function obterDataTransacao() {
     return new Date().toLocaleString();
@@ -45,7 +50,7 @@ function registrarVenda(produto, quantidade, preco) {
     let validaCampos = validarCamposObrigatorios(produto, quantidade, preco, data);
     let validaProdutos = validarQuantidadeProdutos(quantidade);
     let validaPreco = validarPrecoUnitario(preco);
-    let validaEstoque = validarEstoque();
+    let validaEstoque = validarEstoque(produto);
 
     if (validaCampos) {
         if (validaProdutos) {
