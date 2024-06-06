@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Conversor de Dólar</h1>
     <input placeholder=" Valor em Reais" type="number">
     <button onclick="converter()">Converter</button>
     <script>
-        
-const valorReal = document.querySelector("input");
 
-function converter(){
-    
-    const valorConvertido = valorReal.value / 5.24;
+        const valorReal = document.querySelector("input");
 
-    alert(`O valor convertido para Dólar é: $${valorConvertido.toFixed(2)}`);
-}
+        function converter() {
+
+            const valorConvertido = valorReal.value / 5.24;
+
+            alert(`O valor convertido para Dólar é: $${valorConvertido.toFixed(2)}`);
+        }
 
     </script>
 </body>
+
 </html>
